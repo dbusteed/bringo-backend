@@ -19,5 +19,7 @@ import play.api_views
 
 urlpatterns = [
     path('api/boards', play.api_views.BoardList.as_view()),
+    path('api/boards/new', play.api_views.BoardCreate.as_view()),
+    path('api/boards/<int:id>/', play.api_views.BoardRetrieveUpdateDestroy.as_view()),
     path('admin/', admin.site.urls),
 ]
