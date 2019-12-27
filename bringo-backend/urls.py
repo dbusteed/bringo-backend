@@ -14,12 +14,16 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 import play.api_views
 
 urlpatterns = [
     path('api/boards', play.api_views.BoardList.as_view()),
     path('api/boards/new', play.api_views.BoardCreate.as_view()),
     path('api/boards/<int:id>/', play.api_views.BoardRetrieveUpdateDestroy.as_view()),
+
+    path('rest-auth/', include('rest_auth.urls')),
+    path('rest-auth/registration/', include('rest_auth.registration.urls')),
+
     path('admin/', admin.site.urls),
 ]
