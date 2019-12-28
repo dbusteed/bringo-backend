@@ -9,7 +9,7 @@ class BoardList(ListAPIView):
     queryset = Board.objects.all()
     serializer_class = BoardSerializer
     filter_backends = (DjangoFilterBackend,)
-    filter_fields = ('id',)
+    filter_fields = ('id','owner')
 
 class BoardCreate(CreateAPIView):
     serializer_class = BoardSerializer

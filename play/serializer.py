@@ -4,7 +4,7 @@ from play.models import Board
 class BoardSerializer(serializers.ModelSerializer):
     class Meta:
         model = Board
-        fields = ('id', 'name', 'tiles')
+        fields = ('id', 'name', 'tiles', 'owner')
 
     
     def to_representation(self, instance):
