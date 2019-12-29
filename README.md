@@ -1,5 +1,5 @@
 # bringo backend
-### (to be used with [bringo-frontend](https://github.com/dbusteed/bringo-backend))
+### (to be used with [bringo-frontend](https://github.com/dbusteed/bringo-frontend))
 
 ## quickstart
 
